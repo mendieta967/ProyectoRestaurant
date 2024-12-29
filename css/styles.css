@@ -118,6 +118,10 @@ img {
 }
 
 @media(min-width: 768px) {
+    .otro-contendio {
+        align-items: center;
+    }
+
     .navegacion a {
         text-align: left;
     }
@@ -261,8 +265,10 @@ img {
 
 /* Language selection styles */
 .idiomas {
+    align-items: center;
     position: relative;
 }
+
 
 .lang-select {
     appearance: none;
@@ -315,7 +321,6 @@ img {
 
 @media (max-width: 768px) {
     .idiomas {
-        margin-top: 15px;
         margin-left: 0;
     }
 
