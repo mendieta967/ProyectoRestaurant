@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@700&family=Mulish" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="./js/app.js" defer></script>
+    <script src="./js/theme.js" defer></script>
+    <script src="./js/translate/traduction.js" defer></script>
+</head>
+
+<body>
+    <header class="encabezado">
+        <div class="contenedor-navegacion">
+            <div class="contenido-navegacion contenedor">
+                <div class="logo">
+                    <h2 id="logoText">Ristorante <span class="verde">Tu</span><span class="blanco">ri</span><span
+                            class="rojo">lli</span></h2>
+                </div>
+                <div class="otro-contendio">
+                    <div class="themas">
+                        <button class="theme-togle"></button>
+                    </div>
+                    <div class="idiomas">
+                        <select id="language-select" class="lang-select">
+                            <option value="es" data-flag="https://flagcdn.com/w40/es.png">Español</option>
+                            <option value="en" data-flag="https://flagcdn.com/w40/gb.png">English</option>
+                            <option value="it" data-flag="https://flagcdn.com/w40/it.png">Italiano</option>
+                        </select>
+                    </div>
+                    <nav class="navegacion ocultar">
+                        <a href="#inicio" id="home">Inicio</a>
+                        <a href="#sobreNosotros" id="aboutUs">Sobre Nosotros</a>
+                        <a href="#menu" id="menuNav">Menú</a>
+                        <a href="#chefEjecutivo" id="chef">Chef</a>
+                        <a href="#contactos" id="contact">Contactos</a>
+                    </nav>
+                    <div class="icon-navegacion">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contenido-header" id="inicio">
+            <div class="contenedor-encabezado">
+                <div class="texto-encabezado">
+                    <h2 id="welcomeText">Accoglienza</h2>
+                    <a href="#menu" class="btn bordes" id="menuButton">Ir a nuestro Menú</a>
+                </div>
+                <video autoplay loop muted>
+                    <source src="./video/bg_video.mp4">
+                </video>
+            </div>
+        </div>
+    </header>
+
+    <div class="contenedor-nosotros contenedor" id="sobreNosotros">
+        <div class="texto-nosotros">
+            <p class="bienvenido" id="welcomeHeader">Bienvenido!</p>
+            <h1 id="restaurantName">Ristorante Turilli</h1>
+            <p id="aText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum accusantium magni numquam
+                quod
+                voluptatibus! Totam, modi iure, vero aut deserunt incidunt facere rem fugiat, minus a esse consequuntur
+                beatae placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet omnis neque reiciendis,
+                nemo eligendi libero illo sit! Dolorum, nam totam, quam provident similique, odio ut minima delectus
+                ipsam quasi tenetur!</p>
+            <a href="#contactos" class="btn btn-rojo" id="contactButton">Contactar</a>
+        </div>
+        <div class="imagen-nosotros">
+            <div class="imagen1">
+                <img data-src="./img/nosotros1.webp" alt="imagen1" loading="lazy">
+            </div>
+            <div class="imagen2">
+                <img data-src="./img/nosotros2.webp" alt="imagen2" loading="lazy">
+                <img data-src="./img/nosotros3.webp" alt="imagen3" loading="lazy">
+            </div>
+        </div>
+    </div>
+    <section class="menu contenedor" id="menu">
+        <h2 class="texto-platillos" id="menuText">Platillos Populares</h2>
+        <div class="botones-platillos">
+            <button class="todos btn btn-verde" id="allButton">Todos</button>
+            <button class="ensaladas btn btn-verde" id="saladsButton">Ensaladas</button>
+            <button class="pastas btn btn-verde" id="pastaButton">Pastas</button>
+            <button class="pizza btn btn-verde" id="pizzaButton">Pizza</button>
+            <button class="postres btn btn-verde" id="dessertsButton">Postres</button>
+        </div>
+        <div class="platillos">
+            <div class="platillo" data-platillo="ensaladas">
+                <img data-src="./img/ensalada.webp" alt="ensalada" loading="lazy">
+                <h2>Ensalada</h2>
+                <p>lechuga, tomate, etc</p>
+                <div class="precio">
+                    <p>$40.00</p>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="ensaladas">
+                <img data-src="./img/ensalada2.webp" alt="ensalada" loading="lazy">
+                <h2>Ensalada</h2>
+                <p>lechuga, tomate, etc</p>
+                <div class="precio">
+                    <p>$40.00</p>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="ensaladas">
+                <img data-src="./img/ensalada2.webp" alt="ensalada" loading="lazy">
+                <h2>Ensalada</h2>
+                <p>lechuga, tomate, etc</p>
+                <div class="precio">
+                    <p>$40.00</p>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pastas">
+                <img data-src="./img/pasta1.webp" alt="pasta" loading="lazy">
+                <h2>Pastas</h2>
+                <p>Fideo</p>
+                <div class="precio">
+                    <p>$40.00</p>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pastas">
+                <img data-src="./img/pasta2.webp" alt="pasta" loading="lazy">
+                <h2>Pastas</h2>
+                <p>Fideo</p>
+                <div class="precio">
+                    <p>$40.00</p>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pastas">
+                <img data-src="./img/pasta2.webp" alt="pasta" loading="lazy">
+                <h2>Pastas</h2>
+                <p>Fideo</p>
+                <div class="precio">
+                    <p>$40.00</p>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pizza">
+                <img data-src="./img/pizza1.webp" alt="pizza" loading="lazy">
+                <h2>Pizza</h2>
+                <p>lechuga, tomate, etc</p>
+                <div class="precio">
+                    <p>$40.00</p>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pizza">
+                <img data-src="./img/pizza2.webp" alt="pizza" loading="lazy">
+                <h2>Pizza</h2>
+                <p>lechuga, tomate, etc</p>
+                <div class="precio">
+                    <p>$40.00</p>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pizza">
+                <img data-src="./img/pizza2.webp" alt="pizza" loading="lazy">
+                <h2>Pizza</h2>
+                <p>lechuga, tomate, etc</p>
+                <div class="precio">
+                    <p>$40.00</p>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="postres">
+                <img data-src="./img/postres1.webp" alt="postre" loading="lazy">
+                <h2>Postre</h2>
+                <p>lechuga, tomate, etc</p>
+                <div class="precio">
+                    <p>$40.00</p>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="postres">
+                <img data-src="./img/postres1.webp" alt="postre" loading="lazy">
+                <h2>Postre</h2>
+                <p>lechuga, tomate, etc</p>
+                <div class="precio">
+                    <p>$40.00</p>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="postres">
+                <img data-src="./img/postres3.webp" alt="postre" loading="lazy">
+                <h2>Postre</h2>
+                <p>lechuga, tomate, etc</p>
+                <div class="precio">
+                    <p>$40.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="separador">
+        <div class="contenido-separador contenedor">
+            <h2 id="foodStart">Comida italiana para empezar el día</h2>
+            <p id="startDay">Empieza tu día con un buen café</p>
+            <a href="#menu" class="btn btn-verde" id="orderNowButton">Ordena ahora</a>
+        </div>
+    </div>
+    <section class="chef contenedor" id="chefEjecutivo">
+        <h2 id="chefTitle">Chef ejecutivo</h2>
+        <div class="contenido-chef">
+            <div class="texto-chef">
+                <h3 id="chefName">Pedro Olortegui</h3>
+                <p id="chefBio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem laboriosam. Non
+                    quis quisquam
+                    animi voluptas cumque expedita laborum aliquam porro repudiandae ut, iste quas, distinctio cum
+                    minima,
+                    itaque ducimus!</p>
+            </div>
+            <div class="imagen-chef">
+                <img data-src="./img/chef.webp" alt="foto-chef" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <div class="formulario-contacto contenedor" id="contactos">
+        <div class="informacion-contacto">
+            <h3 id="contactHeader">Contáctenos</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.670304094449!2d-60.66712942446498!3d-32.93330797121484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab5214500a03%3A0x92accedec503d97b!2sJujuy%203193%2C%20S2002%20JIA%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1734988541024!5m2!1ses-419!2sar"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p><i class="fa-regular fa-envelope"></i>olorteguopedro@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i>+5493416184842</p>
+            <div class="redesSociales">
+                <a href="https://www.instagram.com/mendieta967/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/pedro-alfonso-olortegui-mendieta/"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/mendieta967"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+        <form class="formulario" id="formulario">
+            <div class="input-formulario">
+                <label for="nombre" id="nameLabel">Nombre</label>
+                <input type="text" placeholder="Nombre" name="nombre" id="nombre">
+            </div>
+            <div class="input-formulario">
+                <label for="Apellidos" id="lastNameLabel">Apellidos</label>
+                <input type="text" placeholder="Apellidos" id="Apellidos">
+            </div>
+            <div class="input-formulario">
+                <label for="correo" id="emailLabel">Correo electrónico</label>
+                <input type="email" placeholder="Correo" id="correo" name="correo">
+            </div>
+
+            <div class="input-formulario">
+                <label for="telefono" id="phoneLabel">Teléfono</label>
+                <input type="tel" placeholder="+3411123456789" id="telefono">
+            </div>
+            <div class="input-formulario">
+                <label for="mensaje" id="messageLabel">Mensaje</label>
+                <textarea name="mensaje" id="mensaje"></textarea>
+            </div>
+            <div class="btn-formulario">
+                <button type="submit" value="Enviar" class="btn btn-verde" id="sendButton">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="pie-pagina">
+        <div class="contenedor-piepagina  contenedor">
+            <div class="info">
+                <h3 id="address">Dirección</h3>
+                <p id="addressText">Jujuy y francia</p>
+            </div>
+            <div class="info">
+                <h3 id="specialDays">Días especiales</h3>
+                <p id="specialDaysText">Sábado y domingos 7am a 11pm</p>
+                <p>+341123456789</p>
+            </div>
+            <div class="info">
+                <h3 id="hours">Horarios</h3>
+                <p id="hoursText">Lunes - Domingo 7am -11pm</p>
+                <div class="redespie">
+                    <a href="https://www.instagram.com/mendieta967/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/mendieta967"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="info">
+                <h3 id="news">Noticias</h3>
+                <p id="subscribe">Suscríbete para recibir más información</p>
+                <input type="email" placeholder="Correo" id="email" name="email" autocomplete="email" required>
+                <button type="submit" id="subscribeButton" value="Suscribirse"
+                    class="btn btn-verde">Suscribirse</button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p id="rights">Todos los derechos reservados &copy2024; Desarrollado por Pedro Olortegui Mendieta</p>
+    </footer>
+</body>
+
+</html>
