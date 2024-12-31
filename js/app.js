@@ -30,26 +30,35 @@ const botonCerrar = () => {
   overlay.classList.add("pantallaCompleta");
 
   const body = document.querySelector("body");
-  if (document.querySelectorAll("pantallaCompleta").length > 0) return;
+  if (document.querySelectorAll(".pantallaCompleta").length > 0) return;
   body.appendChild(overlay);
 
   navegacion.appendChild(btnCerrar, overlay);
   cerrarMenu(btnCerrar, overlay);
+
+  // Añadir eventos a los enlaces de la barra de navegación
+  const enlaces = document.querySelectorAll(".navegacion a");
+  enlaces.forEach((enlace) => {
+    enlace.addEventListener("click", () => {
+      cerrarNavegacion(btnCerrar, overlay);
+    });
+  });
 };
 
 const cerrarMenu = (boton, overlay) => {
-  boton.addEventListener("click", () => {
-    navegacion.classList.add("ocultar");
-    overlay.remove();
-    boton.remove();
-  });
+  boton.addEventListener("click", () => cerrarNavegacion(boton, overlay));
 
   overlay.onclick = function () {
-    navegacion.classList.add("ocultar");
-    overlay.remove();
-    boton.remove();
+    cerrarNavegacion(boton, overlay);
   };
 };
+
+const cerrarNavegacion = (boton, overlay) => {
+  navegacion.classList.add("ocultar");
+  overlay.remove();
+  boton.remove();
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver(
     (entries, observer) => {
